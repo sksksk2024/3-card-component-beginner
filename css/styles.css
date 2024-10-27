@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Utilities */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-top: 1.3rem;
+  font-family: 'Big Shoulders Display', sans-serif;
+  text-transform: uppercase;
+  color: var(--very-light-gray-bg-head-btn);
+}
+
+p {
+  margin-top: 1.3rem;
+  color: var(--transparent-white-p);
+}
+
+button {
+  margin-top: 2rem;
+  padding: 20px 40px;
+  border-radius: 30px;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+}
+
+
+/* Variables */
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white-p: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray-bg-head-btn: hsl(0, 0%, 95%);
+}
+
+html,
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+}
+
+/* Cards styling */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  height: 600px;
+}
+
+.cards__sedans,
+.cards__suvs,
+.cards__luxury {
+  padding: 40px;
+  max-width: 500px;
+}
+
+.cards__sedans {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: var(--bright-orange);
+}
+
+.cards__suvs {
+  background-color: var(--dark-cyan);
+}
+
+.cards__luxury {
+  background-color: var(--very-dark-cyan);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.cards__sedans-btn {
+  color: var(--bright-orange);
+}
+
+.cards__suvs-btn {
+  color: var(--dark-cyan);
+}
+
+.cards__luxury-btn {
+  color: var(--very-dark-cyan);
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  html,
+  body {
+    height: 100vh;
+  }
+
+  .cards {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .cards__sedans,
+  .cards__suvs,
+  .cards__luxury {
+    max-width: 550px;
+    height: 500px;
+  }
+
+  .cards__sedans {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+
+  .cards__luxury {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+
+  .cards__sedans-btn {
+    margin: 5rem -0.1rem 2rem;
+  }
+
+  .cards__suvs-btn {
+    margin: 5rem auto 2rem;
+  }
+
+  .cards__luxury-btn {
+    margin: 5rem auto 2rem;
+  }
+}
